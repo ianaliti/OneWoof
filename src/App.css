@@ -1,38 +1,130 @@
-.App {
+
+* {
+  margin: 0;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+.content {
+  margin-top: 0;
+  position: fixed;
   align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  z-index: 2;
+  background-color: #f9ebe6;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem;
+  color: rgb(25, 23, 23);
+}
+
+.navlink a {
+  color: rgb(27, 27, 27);
+  text-decoration: none;
+}
+
+.content .logo {
+  height: 60px;
+  width: 55px;
+}
+
+.information {
+  display: block;
+  text-align: start;
+  padding: 0 2.5rem;
+  color: #F1F3F4;
+  width: 30rem;
+  line-height: 2;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  letter-spacing: 1px;
+}
+
+.banner {
+  background-image: url('./images/dogs/oria-helion-2A6HjAW9k70-unsplash.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 43.5rem;
+  background-position: center;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+/* Testing */
+
+.content_center {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin: 2.5rem 4rem;
 }
 
-.App-link {
-  color: #61dafb;
+.body_testing {
+  height: 35rem;
+  background-image: url('./images/dogs/fernando-gago-BKFgweZi_TE-unsplash.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  width: 100%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.text_testing {
+  display: block;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 3rem 2rem;
+  line-height: 1.5;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  letter-spacing: 1px;
+  color: #F1F3F4;
+}
+
+.testing_button {
+  background-color: #F1F3F4;
+  border-radius: 2rem;
+  height: 3rem;
+  width: 8rem;
+  font-size: 1rem;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  border-color: #F1F3F4;
+  box-shadow: none;
+  margin-top: 1rem;
+}
+
+/* Shop */
+
+.pictures {
+  height: 35rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+}
+
+.one {
+  background-image: url('./images/dogs/jakub-dziubak-lO3CxluZk94-unsplash.jpg');
+  margin-right: 0.5rem;
+}
+
+.two {
+  background-image: url('./images/dogs/bill-stephan-og0C_9Mz6RA-unsplash.jpg');
+  margin-left: 0.5rem;
+}
+
+.three {
+  background-image: url('./images/dogs/laura-roberts-8esFgt0ZqGg-unsplash.jpg');
+  margin-right: 0.5rem;
+}
+
+.four {
+  background-image: url('./images/dogs/amy-humphries-TMEAnIqJHYs-unsplash.jpg');
+  margin-left: 0.5rem;
+}
+
+.pictures_text {
+  margin-top: 2.5rem;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }

@@ -1,0 +1,16 @@
+.myBtn {
+    border-color: blueviolet;
+    background-color: #F1F3F4;
+    height: 3rem;
+    width: 8rem;
+    font-size: 1rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    box-shadow: none;
+    margin-top: 1rem;
+    border-radius: 2em;
+    transition: all 1s ease;
+}
+
+.myBtn:hover {
+    border-radius: 0;
+}
