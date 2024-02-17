@@ -1,16 +1,15 @@
 import React from 'react'
 import Navbar from '../components/navbar/Navbar'
-import { Product } from '../components/productCart/Product'
-import ProductCart from '../components/productCart/ProductCart'
+import { ProductListing } from '../components/productCart/ProductListing'
+import Cart from '../components/cart/Cart'
 
 const Accesoiries = () => {
 
   return (
     <div>
       <Navbar />
-        <p>Accesoiries</p>
-        <Product />
-        <ProductCart />
+        <ProductListing />
+        <Cart />
     </div>
   )
 }

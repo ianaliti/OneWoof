@@ -22,11 +22,14 @@ const cartSlice = createSlice({
                     price: newItem.price,
                     quantity: 1,
                     totalPrice: newItem.price, 
-                    name: newItem.name,
-                    cover: newItem.cover
+                    title: newItem.title,
+                    image: newItem.image
                 })
                 state.totalQuantity++
             }
+        }, 
+        removeItem(state, action) {
+            
         }
     }
 })

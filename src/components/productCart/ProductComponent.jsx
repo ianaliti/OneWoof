@@ -4,24 +4,25 @@ import { cartAction } from '../../store/cartSlice'
 import MyMainButton from '../buttons/myMainButton/MyMainButton'
 
 
-const ProductCart = ({ id, title, price, image }) => {
+const ProductComponent = ({ id, title, price, image }) => {
 
     const dispatch = useDispatch()
     const addToCart = () => {
         dispatch(cartAction.addToCart({ id, title, price, image }))
     }
+
     return (
-        <div className='productList'>
-            <div className='productCart'>
-            <img className='card_image' src={image} />
+        <div className='productContainer'>
+            <div>
+            <img className='card_image' src={image} alt='' />
                 <div>
                     <p>{title}</p>
                     <p>{price}</p>  
                 </div>
+                <MyMainButton onClick={addToCart}>Add</MyMainButton>
             </div>
-            <MyMainButton onClick={addToCart}>Add</MyMainButton>
         </div>
     )
 }
 
-export default ProductCart
+export default ProductComponent
