@@ -1,6 +1,6 @@
 import React from 'react'
 import Navbar from '../components/navbar/Navbar'
-import { ProductListing } from '../components/productCart/ProductListing'
+import { ProductListing } from '../components/allProducts/ProductListing'
 import Cart from '../components/cart/Cart'
 
 const Accesoiries = () => {
@@ -9,7 +9,7 @@ const Accesoiries = () => {
     <div>
       <Navbar />
         <ProductListing />
-        <Cart />
+        {/* <Cart /> */}
     </div>
   )
 }

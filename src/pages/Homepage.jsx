@@ -3,6 +3,7 @@ import Navbar from '../components/navbar/Navbar'
 import Banner from '../components/banner/Banner'
 import MainInfo from '../components/main /MainInfo'
 
+
 const Homepage = () => {
   return (
     <div>
