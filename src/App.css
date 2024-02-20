@@ -127,6 +127,8 @@ nav {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
+/* Accessoires */
+
 /* Product Cart */
 
 .productList {
@@ -142,10 +144,13 @@ nav {
 .productContainer{
   width: 30%;
   display: block;
-  border: solid #f8ecbe;
+  justify-content: center;
+  align-items: center;
+  background-color: #DCC2AB;
 }
 
 .card_image {
+  margin-top: 0.5em;
   width: 7em;
 }
 

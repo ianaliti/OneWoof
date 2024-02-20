@@ -21,7 +21,7 @@ const ProductComponent = ({ id, title, price, image, category }) => {
     }
 
     return (
-        <div className='productContainer'>
+        <div>
             {/* <Link to={`/product/${id}`}> */}
             <div>
             <img className='card_image' src={image} alt='' />

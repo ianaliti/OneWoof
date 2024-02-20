@@ -40,13 +40,13 @@ export const selectAllProducts = (state) => state.products.productItems;
 export const getProductsStatus = (state) => state.products.status;
 export const getProductsError = (state) => state.products.error;
 
-// export const selectCartAllProducts = (state) => {
-//     const allProducts = selectAllProducts(state);
-//     const searchTerm = selectedSearch(state)
+export const selectCartAllProducts = (state) => {
+    const allProducts = selectAllProducts(state);
+    const searchTerm = selectedSearch(state)
 
-//     // return allProducts.filter((product) => 
-//     // product.title.toLowerCase().includes(searchTerm.toLowerCase()))
-// }
+    return allProducts.filter((product) => 
+    product.title.toLowerCase().includes(searchTerm.toLowerCase()))
+}
 
 
 export default productsSlice.reducer;

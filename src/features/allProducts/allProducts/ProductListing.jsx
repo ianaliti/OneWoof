@@ -1,7 +1,7 @@
 import React, { useEffect } from "react"
 import ProductComponent from "../ProductComponent"
 import { useDispatch, useSelector } from "react-redux";
-import { getProducts, getProductsError, getProductsStatus, selectAllProducts } from "./allProductsSlice";
+import { getProducts, getProductsError, getProductsStatus, selectCartAllProducts } from "./allProductsSlice";
 import { addToCart } from '../../cart/cartSlice'
 import { selectCartItem } from '../../cart/cartSlice'
 import MyMainButton from "../../../components/buttons/myMainButton/MyMainButton";
@@ -10,10 +10,10 @@ import MyMainButton from "../../../components/buttons/myMainButton/MyMainButton"
 export const ProductListing = () => {
 
     const dispatch = useDispatch();
-    const products = useSelector(selectAllProducts);
+    const products = useSelector(selectCartAllProducts);
+
     const { id, title, price, image, category } = products;
     const productsStatus = useSelector(getProductsStatus);
-    // const productsCart = useSelector(selectCartItem);
     
     const error = useSelector(getProductsError)
 
@@ -53,7 +53,7 @@ export const ProductListing = () => {
     return (
         <div className="productList">
             {products.map((item) => (
-                <div>
+                <div className="productContainer">
                     <ProductComponent key={item.id} id={item.id} image={item.image} title={item.title} price={item.price} />
                     {/* <MyMainButton onClick={onAddCartItem} >Add</MyMainButton> */}
                 </div>

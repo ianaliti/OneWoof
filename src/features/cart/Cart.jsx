@@ -1,16 +1,15 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux';
-import { removeFromCart, selectCartItem } from './cartSlice';
+import { removeFromCart, selectCartItem, cartQuantity } from './cartSlice';
 import ProductComponent from '../allProducts/ProductComponent';
 import MyMainButton from '../../components/buttons/myMainButton/MyMainButton';
 
 const Cart = () => {
 
   const dispatch = useDispatch()
-  const items = useSelector(state => state.cart.itemsList)
-  // const { status } = useSelector(state => state.products)
+  const items = useSelector(selectCartItem)
 
-  console.log(items)
+  const quantity = useSelector(cartQuantity)
 
   const onRemoveItemCart = (items) => {
     dispatch(removeFromCart(items))
@@ -29,6 +28,9 @@ const Cart = () => {
           ))
         }
       </div>
+        <div>
+          {quantity}
+        </div>
     </div>
   )
 }

@@ -16,6 +16,7 @@ const cartSlice = createSlice({
                 existItem.quantity++
                 existItem.totalPrice += newItem.price
             } else {
+                state.totalQuantity++
                 state.itemsList.push({
                     id: newItem.id,
                     price: newItem.price,
@@ -24,39 +25,26 @@ const cartSlice = createSlice({
                     title: newItem.title,
                     image: newItem.image
                 })
-                state.totalQuantity++
             }
         },
         removeFromCart(state, action) {
             return state.filter((item) => item.title !== action.payload.title)
-        }, 
-        // addFavoriteRecipe: (state, action) => {
-        //     const newItem = action.payload;
-        //     state.itemsList.push(
-        //         {
-        //             id: newItem.id,
-        //             price: newItem.price,
-        //             quantity: 1,
-        //             totalPrice: newItem.price,
-        //             title: newItem.title,
-        //             image: newItem.image
-        //         });
-        //     state.totalQuantity++
-        // }
+        }
     }
 })
 
 export const { addToCart, removeFromCart } = cartSlice.actions;
 
 export const selectCartItem = (state) => state.cart.itemsList;
+export const cartQuantity = (state) => state.cart.totalQuantity;
 
-// export const selectFilteredCartItem = (state) => {
-//     const itemsCart = selectCartItem(state);
-//     const searchTerm = selectedSearch(state);
+export const selectFilteredCartItem = (state) => {
+    const itemsCart = selectCartItem(state);
+    const searchTerm = selectedSearch(state);
 
-//     // return itemsCart.filter((item) =>
-//     //     item.title.toLowerCase().includes(searchTerm.toLowerCase())
-//     // )
-// }
+    return itemsCart.filter((item) =>
+        item.title.toLowerCase().includes(searchTerm.toLowerCase())
+    )
+}
 
 export default cartSlice.reducer;
