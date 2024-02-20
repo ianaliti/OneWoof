@@ -148,3 +148,9 @@ nav {
 .card_image {
   width: 7em;
 }
+
+/* Search */
+
+#search {
+  margin-top: 8em;
+}
