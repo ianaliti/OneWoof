@@ -7,8 +7,8 @@ import MyMainButton from '../../components/buttons/myMainButton/MyMainButton';
 const Cart = () => {
 
   const dispatch = useDispatch()
-  const items = useSelector(selectCartItem)
-  const { status } = useSelector(state => state.products)
+  const items = useSelector(state => state.cart.itemsList)
+  // const { status } = useSelector(state => state.products)
 
   console.log(items)
 
@@ -20,14 +20,14 @@ const Cart = () => {
     <div>
       <h1>Product List</h1>
       <div>
-        {/* {
-          items.map((product) => (
+        {
+          items.map((item) => (
             <div>
-              <ProductComponent product={product} key={product.id} />
-              <MyMainButton onClick={onRemoveItemCart} >Add</MyMainButton>
+              <ProductComponent key={item.id} id={item.id} image={item.image} title={item.title} price={item.price} />
+              <MyMainButton onClick={onRemoveItemCart}>Remove</MyMainButton>
             </div>
           ))
-        } */}
+        }
       </div>
     </div>
   )
