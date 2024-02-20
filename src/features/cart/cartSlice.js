@@ -1,7 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { selectedSearch } from "../search/searchSlice";
 
 const cartSlice = createSlice({
-    name: 'cart',
+    name: 'items',
     initialState: {
         itemsList: [],
         totalQuantity: 0,
@@ -9,10 +10,9 @@ const cartSlice = createSlice({
     reducers: {
         addToCart(state, action) {
             const newItem = action.payload;
-
             const existItem = state.itemsList.find((item) => item.id === newItem.id)
 
-            if(existItem) {
+            if (existItem) {
                 existItem.quantity++
                 existItem.totalPrice += newItem.price
             } else {
@@ -20,7 +20,7 @@ const cartSlice = createSlice({
                     id: newItem.id,
                     price: newItem.price,
                     quantity: 1,
-                    totalPrice: newItem.price, 
+                    totalPrice: newItem.price,
                     title: newItem.title,
                     image: newItem.image
                 })
@@ -28,13 +28,22 @@ const cartSlice = createSlice({
             }
         },
         removeFromCart(state, action) {
-            return state.filter((item) => item.id !== action.payload.id)
-        } 
+            return state.filter((item) => item.title !== action.payload.title)
+        }
     }
 })
 
-export const { cartAction, removeFromCart} = cartSlice.actions;
+export const { addToCart, removeFromCart } = cartSlice.actions;
 
-export const selectItem = (state) => state.cart;
+export const selectCartItem = (state) => state.itemsList;
+
+// export const selectFilteredCartItem = (state) => {
+//     const itemsCart = selectCartItem(state);
+//     const searchTerm = selectedSearch(state);
+
+//     // return itemsCart.filter((item) =>
+//     //     item.title.toLowerCase().includes(searchTerm.toLowerCase())
+//     // )
+// }
 
 export default cartSlice.reducer;

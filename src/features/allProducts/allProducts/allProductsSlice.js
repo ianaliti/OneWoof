@@ -1,5 +1,6 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit"
 import axios from "axios"
+import { selectedSearch } from "../../search/searchSlice";
 
 const initialState = {
     productItems: [],
@@ -8,7 +9,7 @@ const initialState = {
 };
 
 export const getProducts = createAsyncThunk(
-  'products/getProducts',
+  'products/getAllProducts',
   async () => {
     const response = await axios.get('https://fakestoreapi.com/products');
     return response.data;
@@ -39,6 +40,13 @@ export const selectAllProducts = (state) => state.products.productItems;
 export const getProductsStatus = (state) => state.products.status;
 export const getProductsError = (state) => state.products.error;
 
+// export const selectCartAllProducts = (state) => {
+//     const allProducts = selectAllProducts(state);
+//     const searchTerm = selectedSearch(state)
+
+//     // return allProducts.filter((product) => 
+//     // product.title.toLowerCase().includes(searchTerm.toLowerCase()))
+// }
 
 
 export default productsSlice.reducer;
