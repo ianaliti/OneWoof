@@ -23,7 +23,7 @@ const Cart = () => {
           items.map((item) => (
             <div>
               <ProductComponent key={item.id} id={item.id} image={item.image} title={item.title} price={item.price} />
-              <MyMainButton onClick={onRemoveItemCart}>Remove</MyMainButton>
+              {/* <MyMainButton onClick={onRemoveItemCart}>Remove</MyMainButton> */}
             </div>
           ))
         }

@@ -9,30 +9,27 @@ import { Link } from 'react-router-dom'
 const ProductComponent = ({ id, title, price, image, category }) => {
 
     const dispatch = useDispatch();
-    const products = useSelector(selectCartItem);
 
-    // // const cart = useSelector(state => state.product)
-    // // // console.log(cart)
-    // // const addToCart = () => {
-    // //     dispatch(cartAction.addToCart({ id, title, price, image, category }))
-    // // }
     const onAddCartItem = () => {
         dispatch(addToCart({ id, title, price, image, category }))
     }
 
     return (
-        <div>
-            {/* <Link to={`/product/${id}`}> */}
-            <div>
-            <img className='card_image' src={image} alt='' />
-                <div>
-                    <p>{title}</p>
-                    <p>{price}</p>
-                    <p>{category}</p>  
+        <div className="productContainer">
+            <div className='componentCart'>
+                {/* <Link to={`/product/${id}`}> */}
+                <div className='card_image'>
+                    <img src={image} alt='' />
+                </div>
+                {/* </Link> */}
+                <div className='product_info'>
+                    <h3>{title}</h3>
+                    <p>${price}</p>
+                </div>
+                <div className='productButton'>
                     <MyMainButton onClick={onAddCartItem}>Add</MyMainButton>
                 </div>
             </div>
-            {/* </Link> */}
         </div>
     )
 }

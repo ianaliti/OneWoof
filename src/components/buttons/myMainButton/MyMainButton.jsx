@@ -3,7 +3,7 @@ import classes from './MyMainButton.module.css'
 
 const MyMainButton = ({ children, ...props }) => {
   return (
-    <div>
+    <div className='productButton'>
          <button {...props} className={classes.myBtn} >{children}</button>
     </div>
   )

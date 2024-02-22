@@ -28,8 +28,16 @@ const cartSlice = createSlice({
             }
         },
         removeFromCart(state, action) {
-            return state.filter((item) => item.title !== action.payload.title)
-        }
+            const id = action.payload
+            const exitstingItem = state.itemsList.find((item) => item.id === id)
+            if (exitstingItem.quantity === 1) {
+                state.itemsList = state.itemsList.filter((item) => item.id !== id)
+                state.totalQuantity--
+            } else {
+                exitstingItem.quantity--
+                exitstingItem.totalPrice -= exitstingItem.price
+            }
+        },
     }
 })
 

@@ -12,10 +12,10 @@ export const ProductListing = () => {
     const dispatch = useDispatch();
     const products = useSelector(selectCartAllProducts);
 
-    const { id, title, price, image, category } = products;
+
     const productsStatus = useSelector(getProductsStatus);
     
-    const error = useSelector(getProductsError)
+    // const error = useSelector(getProductsError)
 
     useEffect(() => {
         if (productsStatus === 'idle') {
@@ -23,20 +23,6 @@ export const ProductListing = () => {
         }
     }, [productsStatus, dispatch])
 
-    const onAddCartItem = () => {
-        dispatch(addToCart({ id, title, price, image, category }))
-    }
-
-    // console.log(productsCart)
-
-    // // const cart = useSelector(state => state.product)
-    // // // console.log(cart)
-    // // const addToCart = () => {
-    // //     dispatch(cartAction.addToCart({ id, title, price, image, category }))
-    // // }
-    // const onAddCartItem = () => {
-    //     dispatch(addToCart({ id, title, price, image, category }))
-    // }
 
 
     //     let productsToDisplay = '';
@@ -53,10 +39,7 @@ export const ProductListing = () => {
     return (
         <div className="productList">
             {products.map((item) => (
-                <div className="productContainer">
-                    <ProductComponent key={item.id} id={item.id} image={item.image} title={item.title} price={item.price} />
-                    {/* <MyMainButton onClick={onAddCartItem} >Add</MyMainButton> */}
-                </div>
+                    <ProductComponent key={item.id} id={item.id} image={item.image} title={item.title} price={item.price} category={item.category}/>
             ))}
         </div>
     )
