@@ -1,10 +1,16 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { removeFromCart, selectCartItem, cartQuantity } from './cartSlice';
 import ProductComponent from '../allProducts/ProductComponent';
 import MyMainButton from '../../components/buttons/myMainButton/MyMainButton';
 
 const Cart = () => {
+
+  // const [cardOpen, setCardOpen] = useState(false)
+  // const closeCard = () => {
+  //   setCardOpen(null)
+  // }
+
 
   const dispatch = useDispatch()
   const items = useSelector(selectCartItem)

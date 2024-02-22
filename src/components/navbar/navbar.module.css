@@ -1,0 +1,13 @@
+  nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem;
+    color: rgb(25, 23, 23);
+    background-color: rgb(250, 234, 212);
+  }
+  
+  .navlink a {
+    color: rgb(27, 27, 27);
+    text-decoration: none;
+  }

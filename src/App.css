@@ -4,32 +4,6 @@
   text-align: center;
 }
 
-.content {
-  position: fixed;
-  align-items: center;
-  justify-content: space-around;
-  width: 100%;
-  background-color: #fef7f5;
-}
-
-nav {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 1rem;
-  color: rgb(25, 23, 23);
-}
-
-.navlink a {
-  color: rgb(27, 27, 27);
-  text-decoration: none;
-}
-
-/* .content .logo {
-  height: 60px;
-  width: 55px;
-} */
-
 .information {
   display: block;
   text-align: start;
