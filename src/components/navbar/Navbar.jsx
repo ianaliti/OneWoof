@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import classes from './navbar.module.css'
 import './navbar.module.css'
 import ProductComponent from '../../features/allProducts/ProductComponent';
+import MyMainButton from '../buttons/myMainButton/MyMainButton';
 
 const Navbar = () => {
 
@@ -33,13 +34,16 @@ const Navbar = () => {
             </nav>
             <div className={`${classes.nav} ${ isNavOpen ? `${classes.nav_open}` : `${classes.nav_closed}` }`}>
                 <div className={classes.logo}>My Bag</div>
-                <ul>
+                <div className={classes.product_cart}>
                 {
                     items.map((item) => (
-                        <ProductComponent key={item.id} id={item.id} image={item.image} title={item.title} price={item.price} />
+                        <ProductComponent key={item.id} id={item.id} image={item.image} title={item.title} price={item.price} className={classes.cartItems}/>
                     ))
                 }
-                </ul>
+                </div>
+                <div className={classes.bagButton}>
+                    <MyMainButton>View Bag</MyMainButton>
+                </div>
             </div>
         </div>
     )

@@ -22,7 +22,7 @@ const Search = () => {
 
   return (
     <div>
-        <div className='wrapper'>
+        <div>
              <input 
             id='search'
             type='text'

@@ -5,12 +5,15 @@
     padding: 1rem;
     color: rgb(25, 23, 23);
     background-color: rgb(250, 234, 212);
+    width: 100%;
+    position: fixed;
   }
   
-  .navlink a {
+  nav a {
     color: rgb(27, 27, 27);
     text-decoration: none;
   }
+
 
   /* Sidebar */
 
@@ -27,16 +30,17 @@
   .nav {
     width: 20em;
     position: fixed;
-    z-index: 7;
-    top: 3.3em;;
+    z-index: 3;
+    top: 3.4em;;
     right: 0;
     background-color: aliceblue;
-    height: 80%;
-    overflow: hidden;
+    height: 70%;
+    overflow-y: scroll;
     transition: 0.5s;
     padding-top: 60px;
     display: flex;
     flex-direction: column;
+    align-items: center;
   }
 
   .nav_open {
@@ -50,4 +54,18 @@
  button {
     background-color: transparent;
     border-color: transparent;
+  }
+
+  .product_cart {
+    width: 80%;
+  }
+
+  .cartItems {
+    display: flex;
+    background-color: #bb1919;
+  }
+
+  .bagButton {
+    position:relative;
+    bottom:0;
   }
