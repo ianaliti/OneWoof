@@ -5,7 +5,8 @@ import Accesoiries from './pages/Accesoiries';
 import Support from './pages/Support';
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fas } from '@fortawesome/free-solid-svg-icons'
-import Cart from './features/cart/Cart';
+import Cart from './components/cart/Cart';
+
 
 
 function App() {

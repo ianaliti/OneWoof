@@ -1,8 +1,8 @@
 import React from 'react'
-import MyMainButton from '../../components/buttons/myMainButton/MyMainButton'
 import { useDispatch, useSelector } from 'react-redux'
 import { clearSearch, selectedSearch, setSearch } from './searchSlice'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import MyMainButton from '../../components/buttons/myMainButton/MyMainButton';
 
 const Search = () => {
 

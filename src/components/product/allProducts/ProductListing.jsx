@@ -2,9 +2,9 @@ import React, { useEffect } from "react"
 import ProductComponent from "../ProductComponent"
 import { useDispatch, useSelector } from "react-redux";
 import { getProducts, getProductsError, getProductsStatus, selectCartAllProducts } from "./allProductsSlice";
-import { addToCart } from '../../cart/cartSlice'
-import { selectCartItem } from '../../cart/cartSlice'
-import MyMainButton from "../../../components/buttons/myMainButton/MyMainButton";
+// import { addToCart } from '../../cart/cartSlice'
+// import { selectCartItem } from '../../cart/cartSlice'
+// import MyMainButton from "../../../components/buttons/myMainButton/MyMainButton";
 
 
 export const ProductListing = () => {

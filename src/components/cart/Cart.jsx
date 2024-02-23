@@ -1,11 +1,9 @@
 import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
-import { removeFromCart, selectCartItem, cartQuantity } from './cartSlice';
-import ProductComponent from '../allProducts/ProductComponent';
-import MyMainButton from '../../components/buttons/myMainButton/MyMainButton';
+import { removeFromCart, selectCartItem, cartQuantity } from '../cart/cartSlice';
+import ProductComponent from '../product/ProductComponent';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import "./sidebar.module.css";
-import Navbar from '../../components/navbar/Navbar';
+import Navbar from '../navbar/Navbar';
 
 const Cart = () => {
 

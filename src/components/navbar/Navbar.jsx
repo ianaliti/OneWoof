@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
-import { cartQuantity, selectCartItem } from '../../features/cart/cartSlice';
+import { cartQuantity, selectCartItem } from '../cart/cartSlice';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import classes from './navbar.module.css'
 import './navbar.module.css'
-import ProductComponent from '../../features/allProducts/ProductComponent';
 import MyMainButton from '../buttons/myMainButton/MyMainButton';
+import ProductComponent from '../product/ProductComponent';
 
 const Navbar = () => {
 
