@@ -16,16 +16,6 @@
 
 
   /* Sidebar */
-
-  .sidebar_toggle {
-    position: fixed;
-    top: 3em;
-    right: 3em;
-    background-color: transparent;
-    border-color: transparent;
-    color: #bb1919;
-    cursor: pointer;
-  }
   
   .nav {
     width: 20em;
