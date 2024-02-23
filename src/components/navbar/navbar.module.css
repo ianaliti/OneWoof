@@ -11,3 +11,43 @@
     color: rgb(27, 27, 27);
     text-decoration: none;
   }
+
+  /* Sidebar */
+
+  .sidebar_toggle {
+    position: fixed;
+    top: 3em;
+    right: 3em;
+    background-color: transparent;
+    border-color: transparent;
+    color: #bb1919;
+    cursor: pointer;
+  }
+  
+  .nav {
+    width: 20em;
+    position: fixed;
+    z-index: 7;
+    top: 3.3em;;
+    right: 0;
+    background-color: aliceblue;
+    height: 80%;
+    overflow: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nav_open {
+    right: 0;
+  }
+
+  .nav_closed {
+    right: -320px;
+  }
+
+ button {
+    background-color: transparent;
+    border-color: transparent;
+  }

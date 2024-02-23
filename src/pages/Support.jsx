@@ -6,7 +6,7 @@ const Support = () => {
     <div>
         <Navbar />
         <div>
-            <h1>I, me, myself</h1>
+            <h1>nuhay bebru</h1>
         </div>
     </div>
   )
