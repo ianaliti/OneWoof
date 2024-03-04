@@ -3,13 +3,13 @@ import { useSelector } from 'react-redux';
 import { NavLink, Link, useNavigate } from 'react-router-dom';
 import { cartQuantity, selectCartItem } from '../cart/cartSlice';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import classes from './navbar.module.css'
+import classes from './Header.module.css'
 import MyMainButton from '../buttons/myMainButton/MyMainButton';
-import ProductComponent from '../product/ProductComponent';
+import CartItem from '../cart/CartItem'
 import { useAuth } from '../auth/useAuth';
 
 
-const Navbar = () => {
+const Header = () => {
 
     const { signout } = useAuth();
     const navigate = useNavigate();
@@ -18,6 +18,9 @@ const Navbar = () => {
 
     const items = useSelector(selectCartItem)
     const quantity = useSelector(cartQuantity)
+
+    console.log(quantity)
+
 
     let total = 0;
     const itemsLists = useSelector(selectCartItem)
@@ -58,7 +61,7 @@ const Navbar = () => {
                 <div className={classes.product_cart}>
                     {
                         items.map((item) => (
-                            <ProductComponent key={item.id} id={item.id} image={item.image} title={item.title} price={item.price} className={classes.cartItems} />
+                            <CartItem key={item.id} id={item.id} image={item.image} title={item.title} price={item.price} className={classes.cartItems} quantity={item.quantity} />
                         ))
                     }
                 </div>
@@ -76,4 +79,4 @@ const Navbar = () => {
     )
 }
 
-export default Navbar
+export default Header

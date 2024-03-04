@@ -1,25 +1,18 @@
 import React from 'react'
-import { useDispatch, useSelector } from 'react-redux'
-import { addToCart, removeFromCart } from '../cart/cartSlice'
-import MyMainButton from '../buttons/myMainButton/MyMainButton'
+import { useDispatch } from 'react-redux'
+import { addToCart } from '../cart/cartSlice'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { cartQuantity } from '../cart/cartSlice';
 import cl from './Product.module.css'
 
 
-const ProductComponent = ({ id, title, price, image }) => {
+const ProductComponent = ({ id, title, price, image, quantity }) => {
 
     const dispatch = useDispatch();
-    const quantity = useSelector(cartQuantity)
 
     const onAddCartItem = () => {
-        dispatch(addToCart({ id, title, price }))
+        dispatch(addToCart({ id, title, price, image }))
     }
 
-    const onRemoveItemCart = () => {
-        dispatch(removeFromCart(id))
-      }
-      
 
     return (
         <div className={cl.productContainer}>
@@ -38,17 +31,7 @@ const ProductComponent = ({ id, title, price, image }) => {
                         <button onClick={onAddCartItem}>
                             <FontAwesomeIcon icon="fa-solid fa-plus" size="lg" style={{ color: "#151619", }} />
                         </button>
-                        <div>
-                            <input
-                                name='quantity'
-                                value={quantity}
-                            />
-                        </div>
-                        <button onClick={onRemoveItemCart}>
-                            <FontAwesomeIcon icon="fa-solid fa-minus" size="lg" style={{ color: "#151619", }} />
-                        </button>
                     </div>
-                    {/* <MyMainButton onClick={onAddCartItem}>Add</MyMainButton> */}
                 </div>
             </div>
         </div>

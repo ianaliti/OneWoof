@@ -1,10 +1,10 @@
 import React from 'react'
-import Navbar from '../components/navbar/Navbar'
+import Header from '../components/header/Header'
 
 const Support = () => {
   return (
     <div>
-        <Navbar />
+        <Header />
         <div>
             <h1>nuhay bebru</h1>
         </div>

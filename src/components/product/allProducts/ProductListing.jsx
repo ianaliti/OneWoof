@@ -1,7 +1,7 @@
 import React, { useEffect } from "react"
 import ProductComponent from "../ProductComponent"
 import { useDispatch, useSelector } from "react-redux";
-import { getProducts, getProductsError, getProductsStatus, selectCartAllProducts } from "./allProductsSlice";
+import { getProducts, getProductsStatus, selectCartAllProducts } from "./allProductsSlice";
 import cl from '../Product.module.css'
 
 // import { addToCart } from '../../cart/cartSlice'
@@ -41,7 +41,7 @@ export const ProductListing = () => {
     return (
         <div className={cl.productList}>
             {products.map((item) => (
-                <ProductComponent key={item.id} id={item.id} image={item.image} title={item.title} price={item.price} category={item.category}/>
+                <ProductComponent key={item.id} id={item.id} image={item.image} title={item.title} price={item.price} category={item.category} />
             ))}
         </div>
     )

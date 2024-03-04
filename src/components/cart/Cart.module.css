@@ -16,3 +16,47 @@
     justify-content: center;
     align-items: center;
 }
+
+.cart_item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 2em 0;
+}
+  
+  .card_image {
+    overflow: hidden;
+    width: 8em;
+    height: 8em;
+  }
+  
+  .card_image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .info {
+    font-size: small;
+  }
+
+
+  .count {
+    display: flex;
+    justify-content: center;
+    padding-top: 0.8em;
+  }
+
+  .count button {
+    width: 3em;
+    font-size: 1.2em;
+  }
+
+  .num_button {
+    background-color: aquamarine;
+
+  }
+  
+  .productButton {
+    display: block;
+  }
